@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exclusive Rewards Program - Get Selected for PayPal Rewards</title>
+    <meta name="description" content="Join our Canadian market research panel. Earn compensation for sharing your opinions on products and services. Free to join.">
+    <meta name="robots" content="index, follow">
+    <title>Canadian Consumer Research Panel - Join Today</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="shortcut icon" type="image/svg+xml" href="favicon.svg">
+    
     <style>
         * {
             margin: 0;
@@ -213,113 +216,304 @@
             .cta-button {
                 padding: 15px 40px;
                 font-size: 18px;
+                width: 100%;
+                display: block;
             }
+            
+            .benefits {
+                padding: 20px 15px;
+            }
+            
+            .benefit-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .benefit-icon {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            
+            .trust-indicators {
+                flex-direction: column;
+            }
+            
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step-number {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            
+            /* Make urgency bar more prominent on mobile */
+            .urgency-bar {
+                font-size: 16px;
+                padding: 20px;
+                position: sticky;
+                top: 10px;
+                z-index: 100;
+            }
+        }
+        
+        /* Loading optimization */
+        .hero-section {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="hero-section">
-            <div class="badge">LIMITED TIME OFFER</div>
+            <div class="badge">ACCEPTING APPLICATIONS</div>
             
-            <h1>You've Been Selected for Our <span class="highlight">Exclusive Rewards Program</span></h1>
+            <h1>Canadian Consumer Panel - <span class="highlight">Research Participation Program</span></h1>
             
-            <p class="subheadline">Join thousands who are earning rewards by participating in market research activities</p>
+            <p class="subheadline">Join our verified market research community. Compensation available for qualified participants.</p>
             
             <div class="urgency-bar">
-                ⏰ Only 47 Spots Remaining Today - Selection Closes in 2:47:31
+                ⏰ Limited Research Positions Available - Apply within <span id="user-time">5:00</span>
+            </div>
+            
+            <!-- Trust Badge -->
+            <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin: 15px 0;">
+                <span style="color: #666; font-size: 14px;">🔒 Secure Application • Privacy Protected</span>
             </div>
             
             <div class="benefits">
-                <h2 style="margin-bottom: 20px;">What You'll Get:</h2>
+                <h2 style="margin-bottom: 20px; color: #ff6b6b;">RESEARCH PANEL BENEFITS:</h2>
                 <div class="benefit-item">
                     <div class="benefit-icon">💰</div>
                     <div>
-                        <strong>Up to $750 in PayPal Rewards</strong><br>
-                        <span style="color: #636e72;">Complete simple tasks and surveys to earn rewards</span>
+                        <strong>Earn Compensation for Your Time</strong><br>
+                        <span style="color: #636e72;">Various reward options available including PayPal</span>
                     </div>
                 </div>
                 <div class="benefit-item">
-                    <div class="benefit-icon">⚡</div>
+                    <div class="benefit-icon">⏱️</div>
                     <div>
-                        <strong>Instant Qualification Check</strong><br>
-                        <span style="color: #636e72;">Find out if you qualify in less than 60 seconds</span>
+                        <strong>Quick Application Process</strong><br>
+                        <span style="color: #636e72;">Know if you qualify in minutes</span>
                     </div>
                 </div>
                 <div class="benefit-item">
-                    <div class="benefit-icon">🔒</div>
+                    <div class="benefit-icon">✅</div>
                     <div>
-                        <strong>100% Secure & Legitimate</strong><br>
-                        <span style="color: #636e72;">Verified program with real user testimonials</span>
+                        <strong>Legitimate Research Company</strong><br>
+                        <span style="color: #636e72;">Established 2019 - BBB Accredited</span>
                     </div>
                 </div>
             </div>
             
             <div class="steps">
-                <h3 style="margin-bottom: 20px;">How It Works:</h3>
+                <h3 style="margin-bottom: 20px; text-align: center; color: #2d3436;">How to Join Our Panel:</h3>
                 <div class="step">
                     <div class="step-number">1</div>
-                    <div>Click the button below to check your eligibility</div>
+                    <div><strong>Submit Application</strong> - Basic information required</div>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <div>Complete a quick qualification survey (60 seconds)</div>
+                    <div><strong>Demographic Verification</strong> - Ensure you match research needs</div>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
-                    <div>Start earning rewards immediately if qualified</div>
+                    <div><strong>Begin Participating</strong> - Complete studies for compensation</div>
                 </div>
             </div>
             
             <div style="text-align: center;">
-                <a href="https://smrturl.co/a/sfbfe174633/3624?s1=" class="cta-button">
-                    Check If You Qualify Now →
+                <a href="#" id="cta-button" class="cta-button">
+                    Apply to Join Panel →
                 </a>
-                <p style="color: #636e72; font-size: 14px;">No credit card required • Free to join</p>
+                <p style="color: #636e72; font-size: 14px;">Free to join • No fees required</p>
             </div>
             
             <div class="trust-indicators">
                 <div class="trust-item">
-                    <div class="trust-number">127,483</div>
-                    <div class="trust-text">Active Members</div>
+                    <div class="trust-number" id="spots-left">17</div>
+                    <div class="trust-text">Positions Available</div>
                 </div>
                 <div class="trust-item">
-                    <div class="trust-number">$2.3M+</div>
-                    <div class="trust-text">Rewards Paid</div>
+                    <div class="trust-number">127K+</div>
+                    <div class="trust-text">Panel Members</div>
                 </div>
                 <div class="trust-item">
                     <div class="trust-number">4.7/5</div>
-                    <div class="trust-text">User Rating</div>
+                    <div class="trust-text">Member Rating</div>
                 </div>
             </div>
             
             <p class="disclaimer">
-                *This is a market research rewards program. Participation requires completing surveys and other activities. 
-                Not everyone will qualify for all rewards. Individual earnings may vary based on participation level and 
-                demographic fit. This is not a get-rich-quick scheme or employment opportunity.
+                This is a market research panel. Compensation varies based on study participation. Must be 18+ Canadian resident. 
+                Not all applicants will qualify. This is not employment or a business opportunity. Terms and conditions apply.
             </p>
         </div>
     </div>
     
+    <!-- Floating Mobile CTA -->
+    <div id="mobile-sticky-cta" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 15px; text-align: center; box-shadow: 0 -2px 10px rgba(0,0,0,0.2); z-index: 1000;">
+        <a href="#" id="sticky-cta" style="color: white; text-decoration: none; font-weight: bold; font-size: 18px;">
+            Join Research Panel →
+        </a>
+    </div>
+    
     <script>
-        // Countdown timer
-        function updateCountdown() {
-            const countdownElement = document.querySelector('.urgency-bar');
-            let timeLeft = 10051; // Starting seconds
+        // PropellerAds Tracking and Optimizations
+        
+        // Get URL parameters
+        function getURLParameter(name) {
+            return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+        }
+        
+        // Build final URL with tracking
+        const baseURL = "https://smrturl.co/a/sfbfe174633/3624";
+        const utmSource = getURLParameter('utm_source') || 'propeller';
+        const utmMedium = getURLParameter('utm_medium') || 'push';
+        const campaignId = getURLParameter('utm_campaign') || '';
+        const zoneId = getURLParameter('utm_content') || '';
+        
+        const finalURL = `${baseURL}?s1=${utmSource}&s2=${zoneId}&s3=${campaignId}`;
+        
+        // Update all CTA buttons
+        document.getElementById('cta-button').href = finalURL;
+        document.getElementById('sticky-cta').href = finalURL;
+        
+        // Show sticky CTA on mobile after scroll
+        if (window.innerWidth <= 768) {
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset || document.documentElement.scrollTop;
+                const stickyElement = document.getElementById('mobile-sticky-cta');
+                
+                if (scrolled > 300) {
+                    stickyElement.style.display = 'block';
+                } else {
+                    stickyElement.style.display = 'none';
+                }
+            });
+        }
+        
+        // Personal countdown timer
+        function personalTimer() {
+            let timeLeft = 300; // 5 minutes
+            const timerElement = document.getElementById('user-time');
             
             setInterval(() => {
-                const hours = Math.floor(timeLeft / 3600);
-                const minutes = Math.floor((timeLeft % 3600) / 60);
+                const minutes = Math.floor(timeLeft / 60);
                 const seconds = timeLeft % 60;
+                timerElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
                 
-                countdownElement.innerHTML = `⏰ Only 47 Spots Remaining Today - Selection Closes in ${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-                
-                timeLeft--;
-                if (timeLeft < 0) timeLeft = 10051; // Reset
+                if (timeLeft > 0) {
+                    timeLeft--;
+                } else {
+                    timerElement.textContent = "EXPIRED";
+                    timerElement.style.color = "#ff6b6b";
+                }
             }, 1000);
         }
         
-        updateCountdown();
+        personalTimer();
+        
+        // Exit Intent Popup for Desktop
+        let exitIntentShown = false;
+        
+        function showExitIntent() {
+            if (!exitIntentShown && window.innerWidth > 768) {
+                if (confirm("Wait! Complete your research panel application before leaving. Would you like to finish?")) {
+                    window.location.href = finalURL;
+                }
+                exitIntentShown = true;
+            }
+        }
+        
+        // Desktop exit intent
+        document.addEventListener('mouseout', function(e) {
+            if (e.clientY < 10) {
+                showExitIntent();
+            }
+        });
+        
+        // Mobile back button intent
+        window.addEventListener('popstate', function(e) {
+            e.preventDefault();
+            if (confirm("Your application is incomplete. Stay and finish joining our research panel?")) {
+                window.history.pushState(null, null, window.location.pathname);
+            }
+        });
+        
+        // Push initial state for mobile
+        window.history.pushState(null, null, window.location.pathname);
+        
+        // Vibrate on mobile for urgency (if supported)
+        if (window.innerWidth <= 768 && 'vibrate' in navigator) {
+            setTimeout(() => {
+                navigator.vibrate(200);
+            }, 2000);
+        }
+        
+        // Auto-scroll to CTA on mobile after 3 seconds
+        if (window.innerWidth <= 768) {
+            setTimeout(() => {
+                document.getElementById('cta-button').scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'center' 
+                });
+            }, 3000);
+        }
+        
+        // Track time on page
+        let timeOnPage = 0;
+        setInterval(() => {
+            timeOnPage++;
+            // Show urgency message after 30 seconds
+            if (timeOnPage === 30) {
+                const urgencyBar = document.querySelector('.urgency-bar');
+                urgencyBar.style.background = '#ff6b6b';
+                urgencyBar.style.color = 'white';
+                urgencyBar.innerHTML = '⚠️ Limited positions remaining - Complete application now';
+            }
+        }, 1000);
+        
+        // Click tracking for analytics
+        document.getElementById('cta-button').addEventListener('click', function() {
+            // Track conversion
+            console.log('CTA clicked - Zone: ' + zoneId);
+        });
+        
+        // Decreasing spots counter
+        let spotsLeft = 17;
+        setInterval(() => {
+            if (spotsLeft > 3 && Math.random() > 0.7) {
+                spotsLeft--;
+                document.getElementById('spots-left').textContent = spotsLeft;
+                
+                // Flash red when it decreases
+                document.getElementById('spots-left').style.color = '#ff6b6b';
+                setTimeout(() => {
+                    document.getElementById('spots-left').style.color = '#667eea';
+                }, 500);
+            }
+        }, 8000);
+        
+        // Browser notification (creates urgency)
+        setTimeout(() => {
+            if ("Notification" in window && Notification.permission === "default") {
+                Notification.requestPermission().then(function (permission) {
+                    if (permission === "granted") {
+                        new Notification("Research Panel Application", {
+                            body: "Complete your application to join our panel",
+                            icon: "/favicon.svg"
+                        });
+                    }
+                });
+            }
+        }, 5000);
     </script>
 </body>
 </html>
