@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Rewards Program - Get Selected for PayPal Rewards</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .hero-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            background: #f0f0f0;
+            border-radius: 50%;
+            opacity: 0.3;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        h1 {
+            font-size: 36px;
+            color: #2d3436;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .highlight {
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .subheadline {
+            font-size: 20px;
+            color: #636e72;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        
+        .benefits {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .benefit-icon {
+            width: 50px;
+            height: 50px;
+            background: #667eea;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 24px;
+            color: white;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        .trust-indicators {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .trust-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .trust-number {
+            font-size: 32px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .trust-text {
+            font-size: 14px;
+            color: #636e72;
+            margin-top: 5px;
+        }
+        
+        .urgency-bar {
+            background: #fee;
+            border: 2px solid #ff6b6b;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+            animation: shake 2s infinite;
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+            20%, 40%, 60%, 80% { transform: translateX(2px); }
+        }
+        
+        .disclaimer {
+            font-size: 12px;
+            color: #636e72;
+            margin-top: 30px;
+            line-height: 1.6;
+            text-align: center;
+        }
+        
+        .steps {
+            margin: 30px 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+            
+            .hero-section {
+                padding: 30px 20px;
+            }
+            
+            .cta-button {
+                padding: 15px 40px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero-section">
+            <div class="badge">LIMITED TIME OFFER</div>
+            
+            <h1>You've Been Selected for Our <span class="highlight">Exclusive Rewards Program</span></h1>
+            
+            <p class="subheadline">Join thousands who are earning rewards by participating in market research activities</p>
+            
+            <div class="urgency-bar">
+                ⏰ Only 47 Spots Remaining Today - Selection Closes in 2:47:31
+            </div>
+            
+            <div class="benefits">
+                <h2 style="margin-bottom: 20px;">What You'll Get:</h2>
+                <div class="benefit-item">
+                    <div class="benefit-icon">💰</div>
+                    <div>
+                        <strong>Up to $750 in PayPal Rewards</strong><br>
+                        <span style="color: #636e72;">Complete simple tasks and surveys to earn rewards</span>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">⚡</div>
+                    <div>
+                        <strong>Instant Qualification Check</strong><br>
+                        <span style="color: #636e72;">Find out if you qualify in less than 60 seconds</span>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🔒</div>
+                    <div>
+                        <strong>100% Secure & Legitimate</strong><br>
+                        <span style="color: #636e72;">Verified program with real user testimonials</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="steps">
+                <h3 style="margin-bottom: 20px;">How It Works:</h3>
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>Click the button below to check your eligibility</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>Complete a quick qualification survey (60 seconds)</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>Start earning rewards immediately if qualified</div>
+                </div>
+            </div>
+            
+            <div style="text-align: center;">
+                <a href="https://smrturl.co/a/sfbfe174633/3624?s1=" class="cta-button">
+                    Check If You Qualify Now →
+                </a>
+                <p style="color: #636e72; font-size: 14px;">No credit card required • Free to join</p>
+            </div>
+            
+            <div class="trust-indicators">
+                <div class="trust-item">
+                    <div class="trust-number">127,483</div>
+                    <div class="trust-text">Active Members</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">$2.3M+</div>
+                    <div class="trust-text">Rewards Paid</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">4.7/5</div>
+                    <div class="trust-text">User Rating</div>
+                </div>
+            </div>
+            
+            <p class="disclaimer">
+                *This is a market research rewards program. Participation requires completing surveys and other activities. 
+                Not everyone will qualify for all rewards. Individual earnings may vary based on participation level and 
+                demographic fit. This is not a get-rich-quick scheme or employment opportunity.
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Countdown timer
+        function updateCountdown() {
+            const countdownElement = document.querySelector('.urgency-bar');
+            let timeLeft = 10051; // Starting seconds
+            
+            setInterval(() => {
+                const hours = Math.floor(timeLeft / 3600);
+                const minutes = Math.floor((timeLeft % 3600) / 60);
+                const seconds = timeLeft % 60;
+                
+                countdownElement.innerHTML = `⏰ Only 47 Spots Remaining Today - Selection Closes in ${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                
+                timeLeft--;
+                if (timeLeft < 0) timeLeft = 10051; // Reset
+            }, 1000);
+        }
+        
+        updateCountdown();
+    </script>
+</body>
+</html>
